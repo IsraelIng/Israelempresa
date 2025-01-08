@@ -1,0 +1,552 @@
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: white;
+}
+header, footer {
+  background-color: #001f3f; /* Azul marino */
+  color: white;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.logo-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}/* Centrar el texto y cambiar el color en la página Home */
+#home h1 {
+  text-align: center;
+  color: #001f3f; /* Azul marino */
+}
+
+#home p {
+  text-align: center;
+  color: #001f3f; /* Azul marino */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+main {
+  padding: 20px;
+}
+.page {
+  display: none;
+}
+.page.active {
+  display: block;
+}
+/* Nuevo estilo para ajustar tamaño de la imagen y superposición */
+.content-img-wrapper {
+  position: relative;
+  display: inline-block; /* Esto asegura que la superposición sea solo sobre la imagen */
+}
+
+.content-img {
+  width: 1400px; /* Ajusta el ancho según tu preferencia */
+  height: 400px; /* Ajusta el alto según tu preferencia */
+  object-fit: cover; /* Para que la imagen se ajuste al tamaño definido sin deformarse */
+  margin: 20px 0;
+}
+
+
+
+/* Servicios */
+/* Título de la sección */
+.section-title {
+  text-align: center;
+  font-size: 28px;
+  color: #001f3f; /* Azul marino */
+  margin-bottom: 40px;
+}
+
+/* Contenedor de servicios */
+/* Contenedor de servicios */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Cartas de servicios */
+.service {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Iconos de servicios */
+/* Iconos de servicios */
+.service-icon {
+  width: 300px;
+  height: 500px;
+  margin-bottom: 15px;
+  object-fit: cover; /* Asegura que la imagen se ajuste correctamente al tamaño */
+}
+
+
+/* Títulos y texto de los servicios */
+.service h3 {
+  font-size: 20px;
+  color: #001f3f;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+
+/* ¿Por qué elegirnos? */
+.why-choose-us {
+  background-color: #f0f8ff; /* Fondo azul claro */
+  padding: 40px 20px;
+  text-align: center;
+}
+.why-choose-us h2 {
+  font-size: 28px;
+  color: #001f3f; /* Azul oscuro */
+  margin-bottom: 20px;
+}
+.why-choose-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.why-choose-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: left;
+}
+.why-choose-card h3 {
+  font-size: 18px;
+  color: #001f3f; /* Azul oscuro */
+  margin-bottom: 10px;
+}
+.why-choose-card p {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  padding: 10px 20px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-left, .footer-center, .footer-right {
+  flex: 1;
+  text-align: center;
+}
+.footer-left {
+  text-align: left;
+}
+.footer-right {
+  text-align: right;
+}
+/* Contenedor principal de Nosotros */
+.nosotros-container {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Cuadro principal de "Nosotros" */
+.nosotros-main {
+  background-color: #001f3f; /* Azul marino */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.nosotros-title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.nosotros-text {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Subcontenedor de Misión y Visión */
+.nosotros-sub-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite que los cuadros se adapten en pantallas pequeñas */
+}
+
+/* Estilo para los cuadros de Misión y Visión */
+.nosotros-card {
+  background-color: #f0f8ff; /* Azul claro */
+  color: #001f3f; /* Azul marino */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nosotros-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nosotros-card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.nosotros-card-text {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Contenedor de la imagen */
+.nosotros-image-container {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.nosotros-image {
+  max-width: 100%; /* Ajusta la imagen al ancho del contenedor */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+}
+/* Contenedor de la imagen apaisada */
+.nosotros-image-container-wide {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center; /* Centra la imagen horizontalmente */
+  align-items: center;
+  width: 100%;
+}
+
+/* Imagen apaisada rectangular más grande */
+.nosotros-image-wide {
+  width: 50%; /* Ocupa el 100% del contenedor */
+  max-width: 400px; /* Define un ancho máximo grande */
+  height: auto; /* Mantiene las proporciones de la imagen */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombras más pronunciadas */
+  border: 2px solid #ddd; /* Borde suave alrededor de la imagen */
+  margin: 20px auto; /* Centra la imagen horizontalmente */
+}
+
+/* Contenedor principal de Cobertura */
+.cobertura-container {
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+/* Título centrado */
+.cobertura-title {
+  font-size: 36px;
+  text-align: center; /* Centra el texto */
+  color: #001f3f; /* Azul marino */
+  margin-bottom: 20px;
+}
+
+/* Contenedor de contenido (Texto y Mapa) */
+.cobertura-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap; /* Se adapta en pantallas pequeñas */
+  padding: 20px 0;
+}
+
+/* Estilo del recuadro de texto */
+.cobertura-text-container {
+  flex: 1; /* Toma el 50% del ancho disponible */
+  display: flex;
+  justify-content: center; /* Centra el recuadro horizontalmente */
+  align-items: center; /* Centra el recuadro verticalmente */
+}
+
+.cobertura-text-box {
+  background-color: #001f3f; /* Azul marino */
+  color: white; /* Texto blanco */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  text-align: center; /* Centra el texto dentro del recuadro */
+  width: 80%; /* Tamaño relativo al contenedor */
+  max-width: 400px; /* Ancho máximo del recuadro */
+}
+
+.cobertura-text-box p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.cobertura-text-box ul {
+  list-style: none; /* Elimina las viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+.cobertura-text-box ul li {
+  font-size: 16px;
+  margin: 5px 0;
+  padding: 8px;
+  background-color: #003366; /* Azul más oscuro para cada región */
+  border-radius: 4px; /* Bordes redondeados para las filas */
+}
+
+/* Columna derecha: Mapa */
+.cobertura-map {
+  flex: 1; /* Toma el 50% del ancho disponible */
+  display: flex;
+  justify-content: center; /* Centra el mapa horizontalmente */
+  align-items: center; /* Centra el mapa verticalmente */
+}
+
+.map-img {
+  width: 80%; /* El mapa ocupa el 80% del contenedor */
+  max-width: 400px; /* Limita el ancho máximo del mapa */
+  height: auto; /* Mantiene las proporciones del mapa */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombras para destacar */
+  border-radius: 8px; /* Bordes redondeados */
+}
+/* Contenedor principal de Contactos */
+.contactos-container {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* Título de Contactos */
+.contactos-title {
+  font-size: 36px;
+  color: #001f3f; /* Azul marino */
+  margin-bottom: 20px;
+}
+
+/* Contenido: Formulario y Horarios */
+.contactos-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap; /* Se adapta en pantallas pequeñas */
+}
+
+/* Formulario */
+.contactos-form {
+  flex: 1;
+  background-color: #001f3f; /* Azul marino */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contactos-form h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contactos-form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.contactos-form input,
+.contactos-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contactos-form button {
+  background-color: white;
+  color: #001f3f;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.contactos-form button:hover {
+  background-color: #004080; /* Azul más oscuro */
+  color: white;
+}
+
+/* Horarios de Atención */
+.contactos-horarios {
+  flex: 1;
+  background-color: #f0f8ff; /* Azul claro */
+  color: #001f3f;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.contactos-horarios h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Accesos directos */
+.contactos-accesos {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contactos-accesos a {
+  color: #001f3f;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.contactos-accesos a:hover {
+  text-decoration: underline;
+}
+
+/* Mapa de Google */
+.contactos-mapa {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contactos-mapa h2 {
+  font-size: 24px;
+  color: #001f3f; /* Azul marino */
+  margin-bottom: 10px;
+}
+
+.contactos-mapa iframe {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+}
+
+/* Estilo para la línea debajo de Cobertura */
+.cobertura-title {
+  position: relative;
+  margin-bottom: 40px; /* Separación del título y la línea */
+}
+
+.cobertura-title::after {
+  content: "";
+  display: block;
+  width: 100%; /* Ancho total de la página */
+  height: 4px; /* Grosor de la línea */
+  background-color: #AEE8F9; /* Celeste pastel */
+  margin-top: 30px; /* Espaciado entre el título y la línea */
+}
+/* Estilo para la línea debajo de Contactos */
+.contactos-title {
+  position: relative;
+  margin-bottom: 40px; /* Separación del título y la línea */
+}
+
+.contactos-title::after {
+  content: "";
+  display: block;
+  width: 100%; /* Ancho total de la página */
+  height: 4px; /* Grosor de la línea */
+  background-color: #AEE8F9; /* Celeste pastel */
+  margin-top: 30px; /* Espaciado entre el título y la línea */
+}
+
+/* Cuadro superior: Cobertura Nacional */
+.cobertura-titulo {
+  background-color: #001f3f; /* Mismo color que el cuadro inferior */
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Cuadro inferior: Trabajamos en las regiones */
+.cobertura-text-container {
+  background-color: transparent; /* Fondo transparente */
+  color: #fff; /* Texto en blanco */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: none; /* Sin sombra */
+}
+
+.cobertura-text-box p {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff; /* Texto en blanco */
+}
+
+.cobertura-text-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cobertura-text-box li {
+  background-color: #003366; /* Fondo azul intermedio */
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  color: #fff; /* Texto en blanco */
+  border: none; /* Sin borde */
+}
+.cobertura-left {
+  display: flex;
+  flex-direction: column-reverse; /* Invertir el orden de los elementos */
+  gap: 20px; /* Espaciado entre cuadros */
+}
